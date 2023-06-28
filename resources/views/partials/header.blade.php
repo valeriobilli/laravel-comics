@@ -1,7 +1,6 @@
-<header class="p-3">
-    <img class="logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="Laravel Logo">
-    <span>Some links: </span>
+<header class="p-3 text-center">
+    <img class="logo" src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="DC Logo">
     @foreach ($links as $link)
-        <a href="{{ $link['href'] }}">{{ $link['text'] }}</a>
+        <a href="/">{{ $link }}</a>
     @endforeach
 </header>

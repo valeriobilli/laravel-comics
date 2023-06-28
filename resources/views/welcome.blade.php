@@ -4,12 +4,14 @@
 <div class="container my-3">
     <h1>Welcome Page</h1>
     <div class="row g-4">
-        <div class="col">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
-            </div>
+        <div class="col d-flex flex-wrap">
+            @foreach ($comics as $comic)
+                <div class="card comic text-center">
+                    <div>{{$comic["title"]}}</div>
+                    <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" class="thumb"> 
+                </div>
+            @endforeach
         </div>
     </div>
-
 </div>
 @endsection
